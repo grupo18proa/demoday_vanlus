@@ -2,7 +2,6 @@
 import Vanescolar from './imgs/Bus.png'
 import './FirstContent.css'
 import Login from '../../../Login/Login.js'
-import CadastroCondutor from '../../../CadastroCondutor/CadastroCondutor.js' 
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
