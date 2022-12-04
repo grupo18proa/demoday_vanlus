@@ -1,10 +1,17 @@
 import './Login.css'
 import icon from '../../styles/imgs/Logo 3.png'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
+import pintada from './imgs/mao_pintada.png'
+import { Link } from 'react-router-dom'
 
 
 function Login () {
     return (
+        <>
+        <div className='imagem-fundo'>
+                <img src= {pintada} alt="foto-fundo" />
+        </div>
+
         <div id="container-login">
             <div className='container'>
                 <img className='login-logo' src={icon} alt='Vanlus'/>
@@ -23,17 +30,18 @@ function Login () {
                 </label>
 
                 <div className='esqueceu-senha'>
-                    <a href='/#'>Esqueceu a senha?</a>
+                    <a href='/Login'>Esqueceu a senha?</a>
                 </div>
 
                 <section className='enviar'>
-                    <BsFillArrowRightCircleFill size={65}/>
+                  <Link to='/responsavel/home'><BsFillArrowRightCircleFill size={65}/></Link>  
                 </section>                
             </form>
 
             </div>
         </div>
-    );
+        </>
+    )  
 }
-
+    
 export default Login;
