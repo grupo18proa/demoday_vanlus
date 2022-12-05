@@ -4,8 +4,30 @@ import Crianca from './imgs/crianca.png'
 import { Link } from 'react-router-dom'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import { motion } from 'framer-motion'
+import { useForm } from 'react-hook-form';
 
 export function DadosResponsavel3 () {
+
+    /*const {register, handleSubmit, setValue, setFocus} = useForm();
+
+    const onSubmit = (e) => {
+      console.log(e);
+    }
+  
+    const checkCEP = (e) => {
+    if (!e.target.value) return; 
+      const cep = e.target.value.replace(/\D/g, '');
+      console.log(cep);
+      fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
+        console.log(data);
+        setValue('address', data.logradouro);
+        setValue('neighborhood', data.bairro);
+        setValue('city', data.localidade);
+        setValue('uf', data.uf);
+        setFocus('addressNumber');
+      });
+    }*/
+
     return (
 
         <>
@@ -22,7 +44,7 @@ export function DadosResponsavel3 () {
                     <div className="containerEsquerdo">
                         <img className='cadastro-logo' src={Logo} alt="Vanlus"/>                       
                             
-                            <form id='cadastro-condutor2'>
+                            <form onSubmit={handleSubmit(onSubmit)} id='cadastro-condutor2'>
                             <div className='h2-cadastro'>
                                 <h2>Passageiro(a)</h2>
                             </div>
@@ -30,8 +52,8 @@ export function DadosResponsavel3 () {
                                 <input type="text" name="cpf"
                                   placeholder= '*CPF'
                                   pattern="\d{3}\.\d{3}\.-\d{2}"/>
-                                <input type="text" name="Nome Completo" placeholder= "*RG"/>
-                                <input type="text" name="cep" placeholder= "*Nome do filho(a)"/>
+                                <input type="text" name="Nome Completo" placeholder= "*RG" />
+                                <input type="text" name="cep" placeholder= "*Nome do filho(a)" />
                                 <input type="text" name="endereço" placeholder= "*Escola"/> 
                                 <input type="time" name="hora" placeholder= "*Horário"/>
 
