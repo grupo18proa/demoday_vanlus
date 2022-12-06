@@ -4,7 +4,6 @@ import Crianca from './imgs/crianca.png'
 import { Link } from 'react-router-dom'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import { motion } from 'framer-motion'
-import { useForm } from 'react-hook-form';
 
 export function DadosResponsavel3 () {
 
