@@ -8,26 +8,6 @@ import { useForm } from 'react-hook-form';
 
 export function DadosResponsavel3 () {
 
-    /*const {register, handleSubmit, setValue, setFocus} = useForm();
-
-    const onSubmit = (e) => {
-      console.log(e);
-    }
-  
-    const checkCEP = (e) => {
-    if (!e.target.value) return; 
-      const cep = e.target.value.replace(/\D/g, '');
-      console.log(cep);
-      fetch(`https://viacep.com.br/ws/${cep}/json/`).then(res => res.json()).then(data => {
-        console.log(data);
-        setValue('address', data.logradouro);
-        setValue('neighborhood', data.bairro);
-        setValue('city', data.localidade);
-        setValue('uf', data.uf);
-        setFocus('addressNumber');
-      });
-    }*/
-
     return (
 
         <>
@@ -44,7 +24,7 @@ export function DadosResponsavel3 () {
                     <div className="containerEsquerdo">
                         <img className='cadastro-logo' src={Logo} alt="Vanlus"/>                       
                             
-                            <form onSubmit={handleSubmit(onSubmit)} id='cadastro-condutor2'>
+                            <form id='cadastro-condutor2'>
                             <div className='h2-cadastro'>
                                 <h2>Passageiro(a)</h2>
                             </div>
